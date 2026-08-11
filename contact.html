@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Khmer:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,6 +34,7 @@
             fontFamily: {
               sans: ['"Plus Jakarta Sans"', "ui-sans-serif", "system-ui"],
               mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular"],
+              khmer: ['"Noto Sans Khmer"', '"Plus Jakarta Sans"', "ui-sans-serif"],
             },
             colors: {
               brand: {
@@ -357,6 +358,31 @@
         color: #fff;
       }
 
+      /* Khmer script gets its own font stack + slightly larger line-height for legibility */
+      html.lang-km body {
+        font-family:
+          "Noto Sans Khmer",
+          "Plus Jakarta Sans",
+          ui-sans-serif,
+          system-ui;
+      }
+      html.lang-km p,
+      html.lang-km span,
+      html.lang-km h1,
+      html.lang-km h5 {
+        line-height: 1.7;
+      }
+
+      /* Language toggle pill */
+      .lang-toggle {
+        transition:
+          border-color 0.2s ease,
+          background-color 0.2s ease;
+      }
+      .lang-toggle:hover {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
       @media (prefers-reduced-motion: reduce) {
         * {
           animation: none !important;
@@ -387,6 +413,7 @@
           id="navToggle"
           class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 text-ink-200"
           aria-label="Toggle navigation"
+          data-i18n-aria="aria.toggleNav"
           aria-expanded="false"
         >
           <i class="bi bi-list text-2xl"></i>
@@ -397,13 +424,14 @@
           class="hidden md:flex items-center gap-8 text-sm font-bold text-ink-300"
         >
           <li>
-            <a class="nav-link hover:text-white" href="index.html">Home</a>
+            <a class="nav-link hover:text-white" href="index.html" data-i18n="nav.home">Home</a>
           </li>
           <li>
-            <a class="nav-link hover:text-white" href="resume.html">Resume</a>
+            <a class="nav-link hover:text-white" href="resume.html" data-i18n="nav.resume">Resume</a>
           </li>
           <li>
             <a class="nav-link hover:text-white" href="projects.html"
+              data-i18n="nav.projects"
               >Projects</a
             >
           </li>
@@ -412,6 +440,7 @@
               class="nav-link is-active text-white"
               href="contact.html"
               aria-current="page"
+              data-i18n="nav.contact"
               >Contact</a
             >
           </li>
@@ -421,8 +450,23 @@
               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-mono hover:border-white/25 transition-colors"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              available
+              <span data-i18n="nav.available">available</span>
             </a>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-lang-toggle
+              aria-pressed="false"
+              aria-label="Switch language"
+              data-i18n-aria="aria.toggleLang"
+              class="lang-toggle inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-ink-200 text-xs font-mono"
+            >
+              <i class="bi bi-translate"></i>
+              <span data-i18n="common.translate">Translate</span>
+              <span class="text-ink-500">·</span>
+              <span data-lang-label>ខ្មែរ</span>
+            </button>
           </li>
         </ul>
       </div>
@@ -432,11 +476,26 @@
         id="navLinksMobile"
         class="hidden md:hidden flex-col gap-1 px-6 pt-4 text-sm font-bold text-ink-300"
       >
-        <li><a class="block py-2" href="index.html">Home</a></li>
-        <li><a class="block py-2" href="resume.html">Resume</a></li>
-        <li><a class="block py-2" href="projects.html">Projects</a></li>
+        <li><a class="block py-2" href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a class="block py-2" href="resume.html" data-i18n="nav.resume">Resume</a></li>
+        <li><a class="block py-2" href="projects.html" data-i18n="nav.projects">Projects</a></li>
         <li>
-          <a class="block py-2 text-white" href="contact.html">Contact</a>
+          <a class="block py-2 text-white" href="contact.html" data-i18n="nav.contact">Contact</a>
+        </li>
+        <li class="pt-2">
+          <button
+            type="button"
+            data-lang-toggle
+            aria-pressed="false"
+            aria-label="Switch language"
+            data-i18n-aria="aria.toggleLang"
+            class="lang-toggle inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-ink-200 text-xs font-mono"
+          >
+            <i class="bi bi-translate"></i>
+            <span data-i18n="common.translate">Translate</span>
+            <span class="text-ink-500">·</span>
+            <span data-lang-label>ខ្មែរ</span>
+          </button>
         </li>
       </ul>
     </nav>
@@ -462,14 +521,14 @@
             <span
               class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-blink"
             ></span>
-            ~/portfolio $ contact --new
+            <span data-i18n="pages.contact.eyebrow">~/portfolio $ contact --new</span>
           </div>
           <h1
             class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 text-white"
           >
-            <span class="text-gradient">Get in touch</span>
+            <span class="text-gradient" data-i18n="pages.contact.title">Get in touch</span>
           </h1>
-          <p class="text-lg font-light text-ink-400">
+          <p class="text-lg font-light text-ink-400" data-i18n="pages.contact.subtitle">
             Let's work together — reach out on whichever channel is easiest for
             you.
           </p>
@@ -496,8 +555,8 @@
               >
                 <i class="bi bi-telephone"></i>
               </div>
-              <h5 class="font-extrabold text-white mb-1">Phone</h5>
-              <p class="text-sm text-ink-400 mb-4">Call or message any time.</p>
+              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.phoneTitle">Phone</h5>
+              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.phoneDesc">Call or message any time.</p>
               <div
                 class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10"
               >
@@ -508,6 +567,7 @@
                   type="button"
                   data-copy="+855884210655"
                   aria-label="Copy phone number"
+                  data-i18n-aria="aria.copyPhone"
                   class="copy-btn shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-ink-300 hover:text-white hover:border-white/30 flex items-center justify-center"
                 >
                   <i class="bi bi-clipboard"></i>
@@ -531,8 +591,8 @@
               >
                 <i class="bi bi-telegram"></i>
               </div>
-              <h5 class="font-extrabold text-white mb-1">Telegram</h5>
-              <p class="text-sm text-ink-400 mb-4">
+              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.telegramTitle">Telegram</h5>
+              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.telegramDesc">
                 Usually the fastest way to reach me.
               </p>
               <div
@@ -543,6 +603,122 @@
                   type="button"
                   data-copy="@thoykim"
                   aria-label="Copy Telegram handle"
+                  data-i18n-aria="aria.copyTelegram"
+                  class="copy-btn shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-ink-300 hover:text-white hover:border-white/30 flex items-center justify-center"
+                >
+                  <i class="bi bi-clipboard"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="contact-card spot reveal bg-ink-850 border border-white/10 rounded-2xl p-7"
+            >
+              <div
+                class="flex items-center gap-2 text-[11px] font-mono text-ink-400 mb-5"
+              >
+                <span class="term-dot bg-[#ff5f57]"></span>
+                <span class="term-dot bg-[#febc2e]"></span>
+                <span class="term-dot bg-[#28c840]"></span>
+                <span class="ml-2">whatsapp.sh</span>
+              </div>
+              <div
+                class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-brand-primary/15 to-brand-secondary/15 flex items-center justify-center text-brand-primary text-xl"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.whatsappTitle">WhatsApp</h5>
+              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.whatsappDesc">
+                Good for calls or voice notes on the go.
+              </p>
+              <div
+                class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10"
+              >
+                <span class="font-mono text-sm text-ink-100"
+                  >(+855) 88 42 10 655</span
+                >
+                <button
+                  type="button"
+                  data-copy="+855884210655"
+                  aria-label="Copy WhatsApp number"
+                  data-i18n-aria="aria.copyWhatsapp"
+                  class="copy-btn shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-ink-300 hover:text-white hover:border-white/30 flex items-center justify-center"
+                >
+                  <i class="bi bi-clipboard"></i>
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="contact-card spot reveal bg-ink-850 border border-white/10 rounded-2xl p-7"
+            >
+              <div
+                class="flex items-center gap-2 text-[11px] font-mono text-ink-400 mb-5"
+              >
+                <span class="term-dot bg-[#ff5f57]"></span>
+                <span class="term-dot bg-[#febc2e]"></span>
+                <span class="term-dot bg-[#28c840]"></span>
+                <span class="ml-2">messenger.sh</span>
+              </div>
+              <div
+                class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-brand-primary/15 to-brand-secondary/15 flex items-center justify-center text-brand-primary text-xl"
+              >
+                <i class="bi bi-messenger"></i>
+              </div>
+              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.messengerTitle">Messenger</h5>
+              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.messengerDesc">
+                Popular with local Cambodian clients.
+              </p>
+              <div
+                class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10"
+              >
+                <span class="font-mono text-sm text-ink-100 truncate"
+                  >Kim Thoy</span
+                >
+                <a
+                  href="https://www.facebook.com/profile.php?id=100062555424209"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open Messenger chat"
+                  data-i18n-aria="aria.openMessenger"
+                  class="copy-btn shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-ink-300 hover:text-white hover:border-white/30 flex items-center justify-center"
+                >
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="contact-card spot reveal bg-ink-850 border border-white/10 rounded-2xl p-7 sm:col-span-2"
+            >
+              <div
+                class="flex items-center gap-2 text-[11px] font-mono text-ink-400 mb-5"
+              >
+                <span class="term-dot bg-[#ff5f57]"></span>
+                <span class="term-dot bg-[#febc2e]"></span>
+                <span class="term-dot bg-[#28c840]"></span>
+                <span class="ml-2">mail.sh</span>
+              </div>
+              <div
+                class="w-12 h-12 mb-4 rounded-xl bg-gradient-to-br from-brand-primary/15 to-brand-secondary/15 flex items-center justify-center text-brand-primary text-xl"
+              >
+                <i class="bi bi-envelope"></i>
+              </div>
+              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.emailTitle">Email</h5>
+              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.emailDesc">
+                Best for project briefs and longer details.
+              </p>
+              <div
+                class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10"
+              >
+                <span class="font-mono text-sm text-ink-100"
+                  >kimthoy.dev@gmail.com</span
+                >
+                <button
+                  type="button"
+                  data-copy="kimthoy.dev@gmail.com"
+                  aria-label="Copy email address"
+                  data-i18n-aria="aria.copyEmail"
                   class="copy-btn shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-ink-300 hover:text-white hover:border-white/30 flex items-center justify-center"
                 >
                   <i class="bi bi-clipboard"></i>
@@ -553,7 +729,7 @@
 
           <!-- Social row -->
           <div class="reveal text-center">
-            <div class="text-xs font-mono text-brand-secondary mb-5">
+            <div class="text-xs font-mono text-brand-secondary mb-5" data-i18n="pages.contact.elsewhere">
               // elsewhere
             </div>
             <div class="flex justify-center gap-4 flex-wrap">
@@ -608,13 +784,14 @@
           © <span id="year"></span> kim-thoy.dev
         </div>
         <div class="flex gap-4">
-          <a href="#!" class="hover:text-white">Privacy</a>
-          <a href="#!" class="hover:text-white">Terms</a>
-          <a href="contact.html" class="hover:text-white">Contact</a>
+          <a href="#!" class="hover:text-white" data-i18n="footer.privacy">Privacy</a>
+          <a href="#!" class="hover:text-white" data-i18n="footer.terms">Terms</a>
+          <a href="contact.html" class="hover:text-white" data-i18n="footer.contact">Contact</a>
         </div>
       </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
