@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Khmer:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,6 +34,11 @@
             fontFamily: {
               sans: ['"Plus Jakarta Sans"', "ui-sans-serif", "system-ui"],
               mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular"],
+              khmer: [
+                '"Noto Sans Khmer"',
+                '"Plus Jakarta Sans"',
+                "ui-sans-serif",
+              ],
             },
             colors: {
               brand: {
@@ -406,6 +411,29 @@
         color: #fff;
       }
 
+      /* Khmer script gets its own font stack + slightly larger line-height for legibility */
+      html.lang-km body {
+        font-family:
+          "Noto Sans Khmer", "Plus Jakarta Sans", ui-sans-serif, system-ui;
+      }
+      html.lang-km p,
+      html.lang-km span,
+      html.lang-km h1,
+      html.lang-km h2,
+      html.lang-km h5 {
+        line-height: 1.7;
+      }
+
+      /* Language toggle pill */
+      .lang-toggle {
+        transition:
+          border-color 0.2s ease,
+          background-color 0.2s ease;
+      }
+      .lang-toggle:hover {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+
       @media (prefers-reduced-motion: reduce) {
         * {
           animation: none !important;
@@ -437,6 +465,7 @@
           id="navToggle"
           class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 text-ink-200"
           aria-label="Toggle navigation"
+          data-i18n-aria="aria.toggleNav"
           aria-expanded="false"
         >
           <i class="bi bi-list text-2xl"></i>
@@ -447,18 +476,36 @@
           class="hidden md:flex items-center gap-8 text-sm font-bold text-ink-300"
         >
           <li>
-            <a class="nav-link hover:text-white" href="index.html">Home</a>
+            <a
+              class="nav-link hover:text-white"
+              href="index.html"
+              data-i18n="nav.home"
+              >Home</a
+            >
           </li>
           <li>
-            <a class="nav-link hover:text-white" href="resume.html">Resume</a>
+            <a
+              class="nav-link hover:text-white"
+              href="resume.html"
+              data-i18n="nav.resume"
+              >Resume</a
+            >
           </li>
           <li>
-            <a class="nav-link hover:text-white" href="projects.html"
+            <a
+              class="nav-link hover:text-white"
+              href="projects.html"
+              data-i18n="nav.projects"
               >Projects</a
             >
           </li>
           <li>
-            <a class="nav-link hover:text-white" href="contact.html">Contact</a>
+            <a
+              class="nav-link hover:text-white"
+              href="contact.html"
+              data-i18n="nav.contact"
+              >Contact</a
+            >
           </li>
           <li>
             <a
@@ -466,8 +513,23 @@
               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-mono hover:border-white/25 transition-colors"
             >
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              available
+              <span data-i18n="nav.available">available</span>
             </a>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-lang-toggle
+              aria-pressed="false"
+              aria-label="Switch language"
+              data-i18n-aria="aria.toggleLang"
+              class="lang-toggle inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-ink-200 text-xs font-mono"
+            >
+              <i class="bi bi-translate"></i>
+              <span data-i18n="common.translate">Translate</span>
+              <span class="text-ink-500">·</span>
+              <span data-lang-label>ខ្មែរ</span>
+            </button>
           </li>
         </ul>
       </div>
@@ -477,10 +539,39 @@
         id="navLinksMobile"
         class="hidden md:hidden flex-col gap-1 px-6 pt-4 text-sm font-bold text-ink-300"
       >
-        <li><a class="block py-2" href="index.html">Home</a></li>
-        <li><a class="block py-2" href="resume.html">Resume</a></li>
-        <li><a class="block py-2" href="projects.html">Projects</a></li>
-        <li><a class="block py-2" href="contact.html">Contact</a></li>
+        <li>
+          <a class="block py-2" href="index.html" data-i18n="nav.home">Home</a>
+        </li>
+        <li>
+          <a class="block py-2" href="resume.html" data-i18n="nav.resume"
+            >Resume</a
+          >
+        </li>
+        <li>
+          <a class="block py-2" href="projects.html" data-i18n="nav.projects"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a class="block py-2" href="contact.html" data-i18n="nav.contact"
+            >Contact</a
+          >
+        </li>
+        <li class="pt-2">
+          <button
+            type="button"
+            data-lang-toggle
+            aria-pressed="false"
+            aria-label="Switch language"
+            data-i18n-aria="aria.toggleLang"
+            class="lang-toggle inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-ink-200 text-xs font-mono"
+          >
+            <i class="bi bi-translate"></i>
+            <span data-i18n="common.translate">Translate</span>
+            <span class="text-ink-500">·</span>
+            <span data-lang-label>ខ្មែរ</span>
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -508,21 +599,29 @@
               <span
                 class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-blink"
               ></span>
-              ~/portfolio $ whoami
+              <span data-i18n="pages.home.eyebrow">~/portfolio $ whoami</span>
             </div>
             <div class="h-6 mb-4 font-mono text-sm text-brand-secondary">
               <span id="roleText"></span
               ><span class="cursor animate-blink"></span>
             </div>
-            <div class="text-xl font-light text-ink-400 mb-2">
+            <div
+              class="text-xl font-light text-ink-400 mb-2"
+              data-i18n="pages.home.leadIn"
+            >
               I can help your business to
             </div>
             <h1
               class="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-tight mb-6 text-white"
             >
-              <span class="text-gradient">Get online and grow fast</span>
+              <span class="text-gradient" data-i18n="pages.home.title"
+                >Get online and grow fast</span
+              >
             </h1>
-            <p class="text-ink-400 max-w-md mx-auto xl:mx-0 mb-8">
+            <p
+              class="text-ink-400 max-w-md mx-auto xl:mx-0 mb-8"
+              data-i18n="pages.home.intro"
+            >
               I design and build products end to end — clean Laravel back ends,
               hand-written JavaScript on the front, and everything wired
               together, tested, and shipped.
@@ -533,6 +632,7 @@
               <a
                 href="resume.html"
                 data-magnetic
+                data-i18n="pages.home.resumeBtn"
                 class="btn-magnetic btn-shine inline-flex items-center justify-center px-8 py-4 rounded-xl font-extrabold text-white bg-brand-gradient shadow-lg shadow-brand-secondary/20 hover:shadow-xl hover:shadow-brand-secondary/30 active:scale-[0.96]"
               >
                 Resume
@@ -540,6 +640,7 @@
               <a
                 href="projects.html"
                 data-magnetic
+                data-i18n="pages.home.projectsBtn"
                 class="btn-magnetic inline-flex items-center justify-center px-8 py-4 rounded-xl font-extrabold border border-white/15 text-white transition-colors duration-200 ease-out hover:bg-white hover:text-ink-950 active:scale-[0.96]"
               >
                 Projects
@@ -550,21 +651,35 @@
             >
               <div>
                 <div class="text-2xl font-extrabold text-white">4+</div>
-                <div class="text-xs text-ink-400 font-mono">
+                <div
+                  class="text-xs text-ink-400 font-mono"
+                  data-i18n="pages.home.statStacksLabel"
+                >
                   stacks I ship in
                 </div>
               </div>
               <div class="w-px h-8 bg-white/10"></div>
               <div>
                 <div class="text-2xl font-extrabold text-white">100%</div>
-                <div class="text-xs text-ink-400 font-mono">
+                <div
+                  class="text-xs text-ink-400 font-mono"
+                  data-i18n="pages.home.statFrontendLabel"
+                >
                   hand-written frontend
                 </div>
               </div>
               <div class="w-px h-8 bg-white/10"></div>
               <div>
-                <div class="text-2xl font-extrabold text-white">Always</div>
-                <div class="text-xs text-ink-400 font-mono">
+                <div
+                  class="text-2xl font-extrabold text-white"
+                  data-i18n="pages.home.statAlways"
+                >
+                  Always
+                </div>
+                <div
+                  class="text-xs text-ink-400 font-mono"
+                  data-i18n="pages.home.statShippingLabel"
+                >
                   shipping something
                 </div>
               </div>
@@ -603,10 +718,14 @@
               <div
                 class="hidden sm:flex absolute right-full mr-6 top-1/2 -translate-y-1/2 flex-col gap-1 w-[170px] px-4 py-3 rounded-2xl bg-ink-900/90 backdrop-blur border border-white/10 shadow-xl shadow-black/50"
               >
-                <span class="text-[11px] font-mono text-brand-secondary"
+                <span
+                  class="text-[11px] font-mono text-brand-secondary"
+                  data-i18n="pages.home.focusLabel"
                   >// focus</span
                 >
-                <span class="text-sm font-bold text-white leading-snug"
+                <span
+                  class="text-sm font-bold text-white leading-snug"
+                  data-i18n="pages.home.focusText"
                   >Full-stack apps, built end to end</span
                 >
               </div>
@@ -615,7 +734,9 @@
               <div
                 class="hidden lg:flex absolute left-full ml-6 top-1/2 -translate-y-1/2 flex-col gap-2 w-[150px] px-4 py-3 rounded-2xl bg-ink-900/90 backdrop-blur border border-white/10 shadow-xl shadow-black/50"
               >
-                <span class="text-[11px] font-mono text-brand-primary"
+                <span
+                  class="text-[11px] font-mono text-brand-primary"
+                  data-i18n="pages.home.stackLabel"
                   >// stack</span
                 >
                 <div class="flex flex-wrap gap-1.5">
@@ -748,6 +869,7 @@
                   >
                   <span
                     class="block text-[11px] font-mono text-ink-400 leading-tight"
+                    data-i18n="pages.home.roleTag"
                     >Full-stack Developer</span
                   >
                 </span>
@@ -760,7 +882,9 @@
           href="#about"
           class="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-ink-500 hover:text-ink-300 transition-colors"
         >
-          <span class="text-[10px] font-mono tracking-widest uppercase"
+          <span
+            class="text-[10px] font-mono tracking-widest uppercase"
+            data-i18n="pages.home.scroll"
             >scroll</span
           >
           <span
@@ -775,21 +899,30 @@
         class="relative py-20 border-y border-white/5 bg-ink-900/50"
       >
         <div class="max-w-4xl mx-auto px-6 text-center reveal">
-          <div class="text-xs font-mono text-brand-secondary mb-4">
+          <div
+            class="text-xs font-mono text-brand-secondary mb-4"
+            data-i18n="pages.home.aboutLabel"
+          >
             // about
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-white">
+          <h2
+            class="text-3xl sm:text-4xl font-extrabold mb-4 text-white"
+            data-i18n="pages.home.aboutTitle"
+          >
             About Me
           </h2>
-          <p class="text-xl font-light text-ink-300 mb-6">
+          <p
+            class="text-xl font-light text-ink-300 mb-6"
+            data-i18n="pages.home.aboutLead"
+          >
             My name is Kim Thoy and I help brands grow.
           </p>
-          <p class="text-ink-400 mb-3">
+          <p class="text-ink-400 mb-3" data-i18n="pages.home.aboutP1">
             I build dynamic, database-driven web projects using the Laravel
             framework, paired with hand-written HTML, CSS and JavaScript on the
             frontend.
           </p>
-          <p class="text-ink-400 mb-8">
+          <p class="text-ink-400 mb-8" data-i18n="pages.home.aboutP2">
             Alongside that I also work in C# and build and customize sites on
             WordPress.
           </p>
@@ -839,20 +972,31 @@
       <section class="py-20">
         <div class="max-w-6xl mx-auto px-6">
           <div class="text-center mb-12 reveal">
-            <div class="text-xs font-mono text-brand-secondary mb-4">
+            <div
+              class="text-xs font-mono text-brand-secondary mb-4"
+              data-i18n="pages.home.skillsLabel"
+            >
               // stack
             </div>
-            <h2 class="text-3xl font-extrabold mb-2 text-white">
+            <h2
+              class="text-3xl font-extrabold mb-2 text-white"
+              data-i18n="pages.home.skillsTitle"
+            >
               What I work with
             </h2>
-            <p class="text-ink-400">The stack I use most, day to day.</p>
+            <p class="text-ink-400" data-i18n="pages.home.skillsSubtitle">
+              The stack I use most, day to day.
+            </p>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div
               class="skill-card spot reveal bg-ink-850 border border-white/10 rounded-2xl p-7 text-center"
             >
-              <div class="text-[11px] font-mono text-ink-400 mb-4 text-left">
+              <div
+                class="text-[11px] font-mono text-ink-400 mb-4 text-left"
+                data-i18n="pages.home.skillBackend"
+              >
                 backend/
               </div>
               <div
@@ -861,7 +1005,10 @@
                 <i class="bi bi-code-slash"></i>
               </div>
               <h5 class="font-extrabold mb-1 text-white">Laravel</h5>
-              <p class="text-sm text-ink-400">
+              <p
+                class="text-sm text-ink-400"
+                data-i18n="pages.home.laravelDesc"
+              >
                 Dynamic, database-driven sites and web apps.
               </p>
             </div>
@@ -869,7 +1016,10 @@
             <div
               class="skill-card spot reveal bg-ink-850 border border-white/10 rounded-2xl p-7 text-center"
             >
-              <div class="text-[11px] font-mono text-ink-400 mb-4 text-left">
+              <div
+                class="text-[11px] font-mono text-ink-400 mb-4 text-left"
+                data-i18n="pages.home.skillFrontend"
+              >
                 frontend/
               </div>
               <div
@@ -878,7 +1028,7 @@
                 <i class="bi bi-braces"></i>
               </div>
               <h5 class="font-extrabold mb-1 text-white">JavaScript</h5>
-              <p class="text-sm text-ink-400">
+              <p class="text-sm text-ink-400" data-i18n="pages.home.jsDesc">
                 Interactive, responsive frontends built by hand.
               </p>
             </div>
@@ -886,7 +1036,10 @@
             <div
               class="skill-card spot reveal bg-ink-850 border border-white/10 rounded-2xl p-7 text-center"
             >
-              <div class="text-[11px] font-mono text-ink-400 mb-4 text-left">
+              <div
+                class="text-[11px] font-mono text-ink-400 mb-4 text-left"
+                data-i18n="pages.home.skillBackend"
+              >
                 backend/
               </div>
               <div
@@ -895,7 +1048,7 @@
                 <i class="bi bi-hash"></i>
               </div>
               <h5 class="font-extrabold mb-1 text-white">C#</h5>
-              <p class="text-sm text-ink-400">
+              <p class="text-sm text-ink-400" data-i18n="pages.home.csharpDesc">
                 Backend logic and desktop/services work.
               </p>
             </div>
@@ -903,7 +1056,10 @@
             <div
               class="skill-card spot reveal bg-ink-850 border border-white/10 rounded-2xl p-7 text-center"
             >
-              <div class="text-[11px] font-mono text-ink-400 mb-4 text-left">
+              <div
+                class="text-[11px] font-mono text-ink-400 mb-4 text-left"
+                data-i18n="pages.home.skillCms"
+              >
                 cms/
               </div>
               <div
@@ -912,7 +1068,7 @@
                 <i class="bi bi-wordpress"></i>
               </div>
               <h5 class="font-extrabold mb-1 text-white">WordPress</h5>
-              <p class="text-sm text-ink-400">
+              <p class="text-sm text-ink-400" data-i18n="pages.home.wpDesc">
                 Custom builds and theme/plugin work.
               </p>
             </div>
@@ -930,44 +1086,66 @@
           © <span id="year"></span> kim-thoy.dev
         </div>
         <div class="flex gap-4">
-          <a href="#!" class="hover:text-white">Privacy</a>
-          <a href="#!" class="hover:text-white">Terms</a>
-          <a href="contact.html" class="hover:text-white">Contact</a>
+          <a href="#!" class="hover:text-white" data-i18n="footer.privacy"
+            >Privacy</a
+          >
+          <a href="#!" class="hover:text-white" data-i18n="footer.terms"
+            >Terms</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-white"
+            data-i18n="footer.contact"
+            >Contact</a
+          >
         </div>
       </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Typewriter: cycles through roles in the hero
-      const roles = [
-        "Laravel Developer",
-        "JavaScript Developer",
-        "C# Developer",
-        "WordPress Developer",
-      ];
+      // Typewriter: cycles through roles in the hero, in whichever
+      // language is currently active. Restarts cleanly on language switch.
       const roleEl = document.getElementById("roleText");
       if (roleEl) {
-        let roleIndex = 0,
-          charIndex = 0,
-          deleting = false;
-        const type = () => {
-          const current = roles[roleIndex];
-          charIndex += deleting ? -1 : 1;
-          roleEl.textContent = current.slice(0, charIndex);
-          let delay = deleting ? 40 : 70;
-          if (!deleting && charIndex === current.length) {
-            delay = 1400;
-            deleting = true;
-          } else if (deleting && charIndex === 0) {
+        let typewriterToken = 0;
+
+        const startTypewriter = () => {
+          const myToken = ++typewriterToken;
+          const roles = (window.SiteI18n &&
+            window.SiteI18n.get("pages.home.roles")) || [
+            "Laravel Developer",
+            "JavaScript Developer",
+            "C# Developer",
+            "WordPress Developer",
+          ];
+          let roleIndex = 0,
+            charIndex = 0,
             deleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-            delay = 300;
-          }
-          setTimeout(type, delay);
+          roleEl.textContent = "";
+          const type = () => {
+            if (myToken !== typewriterToken) return; // a newer run has taken over
+            const current = roles[roleIndex];
+            charIndex += deleting ? -1 : 1;
+            roleEl.textContent = current.slice(0, charIndex);
+            let delay = deleting ? 40 : 70;
+            if (!deleting && charIndex === current.length) {
+              delay = 1400;
+              deleting = true;
+            } else if (deleting && charIndex === 0) {
+              deleting = false;
+              roleIndex = (roleIndex + 1) % roles.length;
+              delay = 300;
+            }
+            setTimeout(type, delay);
+          };
+          type();
         };
-        type();
+
+        startTypewriter();
+        document.addEventListener("langchange", startTypewriter);
       }
 
       // Sticky nav shadow on scroll

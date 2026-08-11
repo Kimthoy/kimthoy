@@ -56,6 +56,47 @@
           emailDesc: "Best for project briefs and longer details.",
           elsewhere: "// elsewhere",
         },
+        home: {
+          eyebrow: "~/portfolio $ whoami",
+          roles: [
+            "Laravel Developer",
+            "JavaScript Developer",
+            "C# Developer",
+            "WordPress Developer",
+          ],
+          leadIn: "I can help your business to",
+          title: "Get online and grow fast",
+          intro:
+            "I design and build products end to end — clean Laravel back ends, hand-written JavaScript on the front, and everything wired together, tested, and shipped.",
+          resumeBtn: "Resume",
+          projectsBtn: "Projects",
+          statStacksLabel: "stacks I ship in",
+          statFrontendLabel: "hand-written frontend",
+          statAlways: "Always",
+          statShippingLabel: "shipping something",
+          scroll: "scroll",
+          focusLabel: "// focus",
+          focusText: "Full-stack apps, built end to end",
+          stackLabel: "// stack",
+          roleTag: "Full-stack Developer",
+          aboutLabel: "// about",
+          aboutTitle: "About Me",
+          aboutLead: "My name is Kim Thoy and I help brands grow.",
+          aboutP1:
+            "I build dynamic, database-driven web projects using the Laravel framework, paired with hand-written HTML, CSS and JavaScript on the frontend.",
+          aboutP2:
+            "Alongside that I also work in C# and build and customize sites on WordPress.",
+          skillsLabel: "// stack",
+          skillsTitle: "What I work with",
+          skillsSubtitle: "The stack I use most, day to day.",
+          skillBackend: "backend/",
+          skillFrontend: "frontend/",
+          skillCms: "cms/",
+          laravelDesc: "Dynamic, database-driven sites and web apps.",
+          jsDesc: "Interactive, responsive frontends built by hand.",
+          csharpDesc: "Backend logic and desktop/services work.",
+          wpDesc: "Custom builds and theme/plugin work.",
+        },
       },
       aria: {
         copyPhone: "Copy phone number",
@@ -101,6 +142,48 @@
           emailTitle: "អ៊ីមែល",
           emailDesc: "ល្អបំផុតសម្រាប់ការពន្យល់លម្អិតអំពីគម្រោង។",
           elsewhere: "// កន្លែងផ្សេងទៀត",
+        },
+        home: {
+          eyebrow: "~/portfolio $ whoami",
+          roles: [
+            "អ្នកអភិវឌ្ឍន៍ Laravel",
+            "អ្នកអភិវឌ្ឍន៍ JavaScript",
+            "អ្នកអភិវឌ្ឍន៍ C#",
+            "អ្នកអភិវឌ្ឍន៍ WordPress",
+          ],
+          leadIn: "ខ្ញុំអាចជួយអាជីវកម្មរបស់អ្នកឱ្យ",
+          title: "ចូលអនឡាញ និងរីកចម្រើនលឿន",
+          intro:
+            "ខ្ញុំរចនា និងបង្កើតផលិតផលពីដើមដល់ចប់ — Laravel backend ស្អាត JavaScript សរសេរដោយដៃនៅផ្នែកខាងមុខ ព្រមទាំងភ្ជាប់គ្នា សាកល្បង និងបញ្ជូនប្រគល់ជូនគ្រប់ដំណាក់កាល។",
+          resumeBtn: "ប្រវត្តិរូប",
+          projectsBtn: "គម្រោង",
+          statStacksLabel: "ស្តេកបច្ចេកវិទ្យាដែលខ្ញុំប្រើ",
+          statFrontendLabel: "ផ្នែកខាងមុខសរសេរដោយដៃ",
+          statAlways: "ជានិច្ច",
+          statShippingLabel: "កំពុងបញ្ជូនប្រគល់ការងារថ្មី",
+          scroll: "រំកិលចុះក្រោម",
+          focusLabel: "// ចំណុចផ្តោត",
+          focusText: "កម្មវិធីពេញលេញពីដើមដល់ចប់",
+          stackLabel: "// បច្ចេកវិទ្យា",
+          roleTag: "អ្នកអភិវឌ្ឍន៍ Full-stack",
+          aboutLabel: "// អំពីខ្ញុំ",
+          aboutTitle: "អំពីខ្ញុំ",
+          aboutLead: "ខ្ញុំឈ្មោះគឹម ធូយ ហើយខ្ញុំជួយឱ្យម៉ាកយីហោរីកចម្រើន។",
+          aboutP1:
+            "ខ្ញុំបង្កើតគម្រោងគេហទំព័រដែលមានមូលដ្ឋានទិន្នន័យ ដោយប្រើប្រាស់ Laravel framework រួមផ្សំជាមួយ HTML, CSS និង JavaScript ដែលសរសេរដោយដៃនៅផ្នែកខាងមុខ។",
+          aboutP2:
+            "ក្រៅពីនេះ ខ្ញុំក៏ធ្វើការជាមួយ C# និងបង្កើត ព្រមទាំងប្តូរតាមបំណងគេហទំព័រនៅលើ WordPress ផងដែរ។",
+          skillsLabel: "// បច្ចេកវិទ្យា",
+          skillsTitle: "អ្វីដែលខ្ញុំធ្វើការជាមួយ",
+          skillsSubtitle: "បច្ចេកវិទ្យាដែលខ្ញុំប្រើប្រចាំថ្ងៃច្រើនជាងគេ។",
+          skillBackend: "backend/",
+          skillFrontend: "frontend/",
+          skillCms: "cms/",
+          laravelDesc: "គេហទំព័រ និងកម្មវិធីគេហទំព័រដែលមានមូលដ្ឋានទិន្នន័យ។",
+          jsDesc: "ផ្នែកខាងមុខដែលមានអន្តរកម្ម និងឆ្លើយតបល្អ សរសេរដោយដៃ។",
+          csharpDesc:
+            "តក្កវិជ្ជា backend និងការងារកម្មវិធី/សេវាកម្មលើកុំព្យូទ័រ។",
+          wpDesc: "ការបង្កើតតាមបំណង និងការងារ theme/plugin។",
         },
       },
       aria: {
@@ -166,6 +249,8 @@
     document.querySelectorAll("[data-lang-toggle]").forEach((el) => {
       el.setAttribute("aria-pressed", String(lang === "km"));
     });
+
+    document.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
   }
 
   function initToggleButtons() {
@@ -181,6 +266,12 @@
     initToggleButtons();
   });
 
-  // Expose for other inline scripts if ever needed.
-  window.SiteI18n = { getLang, setLang };
+  // Expose for other inline scripts (e.g. the homepage typewriter, which
+  // needs the current language's role list and to react to langchange).
+  window.SiteI18n = {
+    getLang,
+    setLang,
+    get: (path) =>
+      getByPath(TRANSLATIONS[getLang()] || TRANSLATIONS[DEFAULT_LANG], path),
+  };
 })();
