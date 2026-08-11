@@ -1,103 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Kim Thoy | Portfolio</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Kim Thoy</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- Projects Section-->
-            <section class="py-5">
-                <div class="container px-5 mb-5">
-                    <div class="text-center mb-5">
-                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
-                    </div>
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-11 col-xl-9 col-xxl-8">
-                            <!-- Project Card 1-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Fashion4Kh</h2>
-                                            <p>created by Kim Thoy for sell product and CRUD by Admin</p>
-                                        </div>
-                                        <img class="img-fluid" src="/assets/fashion.jpg" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project Card 2-->
-                            <div class="card overflow-hidden shadow rounded-4 border-0">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-5">
-                                            <h2 class="fw-bolder">Project Name 2</h2>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
-                                        </div>
-                                        <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Call to action section-->
-            <section class="py-5 bg-gradient-primary-to-secondary text-white">
-                <div class="container px-5 my-5">
-                    <div class="text-center">
-                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Kim Thoy</div></div>
-                    <div class="col-auto">
-                        <a class="small" href="#!">Privacy</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Terms</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Projects by Kim Thoy — Laravel, JavaScript and C# developer." />
+<meta name="author" content="Kim Thoy" />
+<title>Projects | Kim Thoy</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular'],
+        },
+        colors: {
+          brand: {
+            primary: '#1e30f3',
+            secondary: '#e21e80',
+          },
+          ink: {
+            950: '#07080c',
+            900: '#0b0d14',
+            850: '#0f121b',
+            800: '#12141f',
+            700: '#191c29',
+            600: '#232739',
+            500: '#31374d',
+            400: '#565d78',
+            300: '#8b90a8',
+            200: '#c2c5d6',
+            100: '#e7e8f0',
+          },
+        },
+        keyframes: {
+          drift: {
+            '0%, 100%': { transform: 'translate(0,0) scale(1)' },
+            '33%': { transform: 'translate(30px,-20px) scale(1.08)' },
+            '66%': { transform: 'translate(-20px,15px) scale(0.96)' },
+          },
+          blink: {
+            '0%, 49%': { opacity: '1' },
+            '50%, 100%': { opacity: '0' },
+          },
+        },
+        animation: {
+          drift: 'drift 14s ease-in-out infinite',
+          'drift-slow': 'drift 20s ease-in-out infinite reverse',
+          blink: 'blink 1s step-end infinite',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { background-color: #07080c; overflow-x: hidden; }
+
+  .text-gradient {
+    background-image: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-brand-gradient {
+    background-image: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  }
+
+  /* Ambient background grid + glow orbs */
+  .grid-veil {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
+  }
+  .orb { position: absolute; border-radius: 9999px; filter: blur(90px); opacity: .35; pointer-events: none; }
+
+  /* Reveal-on-scroll */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  /* Sticky nav shadow on scroll */
+  #mainNav { transition: box-shadow .25s ease, background-color .25s ease, border-color .25s ease; }
+  #mainNav.is-scrolled { box-shadow: 0 12px 30px -14px rgba(0,0,0,0.6); border-color: rgba(255,255,255,0.08); }
+
+  /* Nav link underline */
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: "";
+    position: absolute; left: 0; bottom: -4px;
+    width: 0%; height: 2px; border-radius: 2px;
+    background-image: linear-gradient(90deg, #1e30f3, #e21e80);
+    transition: width .25s cubic-bezier(.16,1,.3,1);
+  }
+  .nav-link:hover::after { width: 100%; }
+  .nav-link.is-active::after { width: 100%; }
+
+  /* Project card: tilt + spotlight + image zoom */
+  .project-card {
+    position: relative; overflow: hidden;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform: perspective(1000px) rotateX(var(--rx,0)) rotateY(var(--ry,0)) translateY(var(--ty,0));
+    transition: transform .35s cubic-bezier(.16,1,.3,1);
+  }
+  .project-card::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+    background: linear-gradient(135deg, rgba(30,48,243,.7), rgba(226,30,128,.7));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    opacity: 0; transition: opacity .25s ease;
+  }
+  .project-card:hover::before { opacity: 1; }
+  .project-card::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 1;
+    background: radial-gradient(320px circle at var(--x,50%) var(--y,50%), rgba(255,255,255,.06), transparent 65%);
+    opacity: 0; transition: opacity .3s ease;
+  }
+  .project-card:hover::after { opacity: 1; }
+  .project-media { overflow: hidden; }
+  .project-media img { transition: transform .5s cubic-bezier(.16,1,.3,1); }
+  .project-card:hover .project-media img { transform: scale(1.06); }
+  .project-tag { transition: transform .2s cubic-bezier(.34,1.56,.64,1), border-color .2s ease; }
+  .project-card:hover .project-tag { transform: translateY(-2px); }
+
+  /* Magnetic buttons with shine sweep */
+  .btn-magnetic { will-change: transform; transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease; }
+  .btn-shine { position: relative; overflow: hidden; }
+  .btn-shine::after {
+    content: ""; position: absolute; top: 0; left: -60%; width: 35%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,.4), transparent);
+    transform: skewX(-20deg);
+    transition: left .65s cubic-bezier(.16,1,.3,1);
+    pointer-events: none;
+  }
+  .btn-shine:hover::after { left: 130%; }
+
+  #heroGlow {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(500px circle at var(--mx,50%) var(--my,10%), rgba(226,30,128,.10), transparent 60%);
+  }
+  #ctaGlow {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(480px circle at var(--mx,50%) var(--my,50%), rgba(30,48,243,.20), transparent 60%);
+  }
+
+  .logo-shimmer { background-size: 200% auto; transition: background-position .5s ease; }
+  .logo-shimmer:hover { background-position: -100% 0; }
+
+  ::selection { background: #1e30f3; color: #fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .project-card { transform: none !important; }
+  }
+</style>
+</head>
+<body class="min-h-screen flex flex-col bg-ink-950 text-ink-100 font-sans antialiased">
+
+<!-- Navigation -->
+<nav id="mainNav" class="sticky top-0 z-50 bg-ink-950/80 backdrop-blur-md border-b border-white/5 py-4">
+  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+    <a href="index.html" class="text-lg font-extrabold text-gradient logo-shimmer font-mono">kim-thoy<span class="text-ink-400">.dev</span></a>
+
+    <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 text-ink-200" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="bi bi-list text-2xl"></i>
+    </button>
+
+    <ul id="navLinks" class="hidden md:flex items-center gap-8 text-sm font-bold text-ink-300">
+      <li><a class="nav-link hover:text-white" href="index.html">Home</a></li>
+      <li><a class="nav-link hover:text-white" href="resume.html">Resume</a></li>
+      <li><a class="nav-link is-active text-white" href="projects.html" aria-current="page">Projects</a></li>
+      <li><a class="nav-link hover:text-white" href="contact.html">Contact</a></li>
+      <li>
+        <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-mono hover:border-white/25 transition-colors">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> available
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile menu -->
+  <ul id="navLinksMobile" class="hidden md:hidden flex-col gap-1 px-6 pt-4 text-sm font-bold text-ink-300">
+    <li><a class="block py-2" href="index.html">Home</a></li>
+    <li><a class="block py-2" href="resume.html">Resume</a></li>
+    <li><a class="block py-2 text-white" href="projects.html">Projects</a></li>
+    <li><a class="block py-2" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="flex-1">
+
+  <!-- Header -->
+  <header id="hero" class="relative py-16 md:py-24">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="orb w-[380px] h-[380px] bg-brand-primary -top-32 -left-32 animate-drift"></div>
+      <div class="orb w-[340px] h-[340px] bg-brand-secondary top-24 -right-24 animate-drift-slow"></div>
+      <div class="absolute inset-0 grid-veil"></div>
+      <div id="heroGlow"></div>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto px-6 text-center reveal">
+      <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full text-xs font-mono text-ink-300 bg-white/5 border border-white/10">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-blink"></span>
+        ~/portfolio $ ls projects/
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 text-white">
+        <span class="text-gradient">Projects</span>
+      </h1>
+      <p class="text-lg font-light text-ink-400">A few of the things I've built, end to end.</p>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section class="pb-8">
+    <div class="max-w-4xl mx-auto px-6 flex flex-col gap-8">
+
+      <!-- Project 1 -->
+      <div class="project-card spot reveal bg-ink-850 border border-white/10 rounded-2xl grid grid-cols-1 md:grid-cols-2 items-stretch">
+        <div class="project-media order-2 md:order-1 relative h-56 md:h-full min-h-[220px] bg-ink-800">
+          <img src="assets/fashion.jpg" alt="Fashion4Kh storefront screenshot" class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+        <div class="order-1 md:order-2 p-8 flex flex-col justify-center">
+          <div class="project-tag inline-flex w-fit items-center gap-2 mb-4 px-3 py-1.5 rounded-full text-[11px] font-mono text-ink-300 bg-white/5 border border-white/10">
+            e-commerce
+          </div>
+          <h2 class="text-2xl font-extrabold text-white mb-2">Fashion4Kh</h2>
+          <p class="text-ink-400">An online storefront built for selling products, with a full admin panel for creating, updating, and removing listings.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card spot reveal bg-ink-850 border border-white/10 rounded-2xl grid grid-cols-1 md:grid-cols-2 items-stretch">
+        <div class="order-1 p-8 flex flex-col justify-center">
+          <div class="project-tag inline-flex w-fit items-center gap-2 mb-4 px-3 py-1.5 rounded-full text-[11px] font-mono text-ink-300 bg-white/5 border border-white/10">
+            portfolio
+          </div>
+          <h2 class="text-2xl font-extrabold text-white mb-2">Portfolio</h2>
+          <p class="text-ink-400">This site — a hand-built, hand-animated portfolio covering who I am and what I work on.</p>
+        </div>
+        <div class="project-media order-2 relative h-56 md:h-full min-h-[220px] bg-ink-800">
+          <img src="assets/project-2.png" alt="Portfolio site screenshot" class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative overflow-hidden py-20 mt-12 border-t border-white/5">
+    <div id="ctaGlow"></div>
+    <div class="relative max-w-3xl mx-auto px-6 text-center reveal">
+      <div class="text-xs font-mono text-brand-secondary mb-4">// next</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-8">Let's build something together</h2>
+      <a href="contact.html" data-magnetic
+         class="btn-magnetic btn-shine inline-flex items-center justify-center px-8 py-4 rounded-xl font-extrabold text-white bg-brand-gradient shadow-lg shadow-brand-secondary/20
+                hover:shadow-xl hover:shadow-brand-secondary/30 active:scale-[0.96]">
+        Contact me
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="border-t border-white/5 py-6 mt-auto">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-ink-400">
+    <div class="font-mono text-xs">© <span id="year"></span> kim-thoy.dev</div>
+    <div class="flex gap-4">
+      <a href="#!" class="hover:text-white">Privacy</a>
+      <a href="#!" class="hover:text-white">Terms</a>
+      <a href="contact.html" class="hover:text-white">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Sticky nav shadow on scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  });
+
+  // Mobile menu toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinksMobile = document.getElementById('navLinksMobile');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinksMobile.classList.toggle('flex');
+    navLinksMobile.classList.toggle('hidden');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+  }
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduceMotion) {
+    // Ambient glow follows the cursor in the header and CTA band
+    const bindGlow = (containerId, glowId) => {
+      const container = document.getElementById(containerId);
+      const glow = document.getElementById(glowId);
+      if (!container || !glow) return;
+      container.addEventListener('mousemove', (e) => {
+        const r = container.getBoundingClientRect();
+        glow.style.setProperty('--mx', ((e.clientX - r.left) / r.width) * 100 + '%');
+        glow.style.setProperty('--my', ((e.clientY - r.top) / r.height) * 100 + '%');
+      });
+    };
+    bindGlow('hero', 'heroGlow');
+
+    const ctaSection = document.getElementById('ctaGlow')?.closest('section');
+    if (ctaSection) {
+      ctaSection.addEventListener('mousemove', (e) => {
+        const r = ctaSection.getBoundingClientRect();
+        const glow = document.getElementById('ctaGlow');
+        glow.style.setProperty('--mx', ((e.clientX - r.left) / r.width) * 100 + '%');
+        glow.style.setProperty('--my', ((e.clientY - r.top) / r.height) * 100 + '%');
+      });
+    }
+
+    // Project cards: tilt + spotlight that tracks the cursor
+    document.querySelectorAll('.project-card').forEach((card) => {
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width;
+        const py = (e.clientY - r.top) / r.height;
+        card.style.setProperty('--ry', ((px - 0.5) * 4) + 'deg');
+        card.style.setProperty('--rx', ((py - 0.5) * -4) + 'deg');
+        card.style.setProperty('--ty', '-4px');
+        card.style.setProperty('--x', (px * 100) + '%');
+        card.style.setProperty('--y', (py * 100) + '%');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--ry', '0deg');
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ty', '0px');
+      });
+    });
+
+    // Magnetic CTA button
+    document.querySelectorAll('[data-magnetic]').forEach((btn) => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.3;
+        const y = (e.clientY - r.top - r.height / 2) * 0.3;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0, 0)';
+      });
+    });
+  }
+</script>
+
+</body>
 </html>
