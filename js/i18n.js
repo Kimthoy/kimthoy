@@ -31,7 +31,7 @@
         resume: "Resume",
         projects: "Projects",
         contact: "Contact",
-        available: "available",
+        available: " available",
       },
       footer: {
         privacy: "Privacy",
@@ -96,6 +96,50 @@
           jsDesc: "Interactive, responsive frontends built by hand.",
           csharpDesc: "Backend logic and desktop/services work.",
           wpDesc: "Custom builds and theme/plugin work.",
+        },
+        resume: {
+          eyebrow: "~/portfolio $ cat resume.md",
+          title: "Resume",
+          downloadBtn: "Download Resume",
+          experienceLabel: "// experience",
+          npicOrg: "National Polytechnic Institute of Cambodia (NPIC)",
+          expOrgSub: "Year 3 · Computer Science",
+          expIntro:
+            "Currently pursuing a Bachelor's degree in Computer Science at NPIC. Over the past three years I've built up my skills across:",
+          skillLaravelDesc: "— a robust PHP framework for web applications",
+          skillPhpDesc: "— a versatile scripting language for the web",
+          skillHtmlCssDesc: "— the building blocks of web structure and design",
+          skillJsDesc: "— for building interactive, dynamic web pages",
+          educationLabel: "// education",
+          eduPresentSub: "Computer Science · Year 3",
+          eduPresentDesc:
+            "Pursuing a degree in Computer Science at a reputable institution in Cambodia — building a foundation in programming, software development, and web technologies for a future career in tech.",
+          highSchoolOrg: "Sok An Phnom Penh High School",
+          highSchoolSub: "Diploma",
+          highSchoolDesc:
+            "Graduated in 2021 with a strong foundation across Mathematics, English, and Khmer — ready to apply that foundation to what came next.",
+          skillsLabel: "// skills",
+          proSkillsTitle: "Professional Skills",
+          skillBackendDev: "Backend Developer",
+          skillDesign: "Design",
+          skillCommunication: "Communication",
+          languagesTitle: "Languages",
+        },
+        projects: {
+          eyebrow: "~/portfolio $ ls projects/",
+          title: "Projects",
+          subtitle: "A few of the things I've built, end to end.",
+          tagEcommerce: "e-commerce",
+          project1Title: "Fashion4Kh",
+          project1Desc:
+            "An online storefront built for selling products, with a full admin panel for creating, updating, and removing listings.",
+          tagPortfolio: "portfolio",
+          project2Title: "Portfolio",
+          project2Desc:
+            "This site — a hand-built, hand-animated portfolio covering who I am and what I work on.",
+          ctaLabel: "// next",
+          ctaTitle: "Let's build something together",
+          ctaBtn: "Contact me",
         },
       },
       aria: {
@@ -184,6 +228,51 @@
           csharpDesc:
             "តក្កវិជ្ជា backend និងការងារកម្មវិធី/សេវាកម្មលើកុំព្យូទ័រ។",
           wpDesc: "ការបង្កើតតាមបំណង និងការងារ theme/plugin។",
+        },
+        resume: {
+          eyebrow: "~/portfolio $ cat resume.md",
+          title: "ប្រវត្តិរូប",
+          downloadBtn: "ទាញយកប្រវត្តិរូប",
+          experienceLabel: "// បទពិសោធន៍",
+          npicOrg: "វិទ្យាស្ថានជាតិពហុបច្ចេកទេសកម្ពុជា (NPIC)",
+          expOrgSub: "ឆ្នាំទី៣ · វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+          expIntro:
+            "បច្ចុប្បន្នកំពុងសិក្សាថ្នាក់បរិញ្ញាបត្រផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រនៅ NPIC។ ក្នុងរយៈពេលបីឆ្នាំចុងក្រោយនេះ ខ្ញុំបានបង្កើនជំនាញរបស់ខ្ញុំក្នុងផ្នែកទាំងនេះ៖",
+          skillLaravelDesc: "— ក្របខ័ណ្ឌ PHP ដ៏រឹងមាំសម្រាប់កម្មវិធីគេហទំព័រ",
+          skillPhpDesc: "— ភាសាស្គ្រីបដែលអាចប្រើប្រាស់បានចម្រុះសម្រាប់គេហទំព័រ",
+          skillHtmlCssDesc:
+            "— ធាតុមូលដ្ឋានសម្រាប់រចនាសម្ព័ន្ធ និងការរចនាគេហទំព័រ",
+          skillJsDesc: "— សម្រាប់បង្កើតទំព័រគេហទំព័រដែលមានអន្តរកម្ម និងថាមវន្ត",
+          educationLabel: "// ការសិក្សា",
+          eduPresentSub: "វិទ្យាសាស្ត្រកុំព្យូទ័រ · ឆ្នាំទី៣",
+          eduPresentDesc:
+            "កំពុងសិក្សាថ្នាក់បរិញ្ញាបត្រផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រនៅស្ថាប័នដ៏មានកិត្យានុភាពមួយក្នុងប្រទេសកម្ពុជា — កសាងគ្រឹះលើការសរសេរកម្មវិធី ការអភិវឌ្ឍន៍កម្មវិធី និងបច្ចេកវិទ្យាគេហទំព័រសម្រាប់អាជីពនាពេលអនាគតក្នុងវិស័យបច្ចេកវិទ្យា។",
+          highSchoolOrg: "វិទ្យាល័យសុខ អាន ភ្នំពេញ",
+          highSchoolSub: "សញ្ញាបត្រ",
+          highSchoolDesc:
+            "បញ្ចប់ការសិក្សានៅឆ្នាំ២០២១ ដោយមានគ្រឹះមូលដ្ឋានដ៏រឹងមាំលើមុខវិជ្ជាគណិតវិទ្យា ភាសាអង់គ្លេស និងភាសាខ្មែរ — ត្រៀមខ្លួនអនុវត្តគ្រឹះនោះទៅលើដំណាក់កាលបន្ទាប់។",
+          skillsLabel: "// ជំនាញ",
+          proSkillsTitle: "ជំនាញវិជ្ជាជីវៈ",
+          skillBackendDev: "អ្នកអភិវឌ្ឍន៍ Backend",
+          skillDesign: "រចនា",
+          skillCommunication: "ការទំនាក់ទំនង",
+          languagesTitle: "ភាសាសរសេរកម្មវិធី",
+        },
+        projects: {
+          eyebrow: "~/portfolio $ ls projects/",
+          title: "គម្រោង",
+          subtitle: "ការងារមួយចំនួនដែលខ្ញុំបានបង្កើតពីដើមដល់ចប់។",
+          tagEcommerce: "អាជីវកម្មអនឡាញ",
+          project1Title: "Fashion4Kh",
+          project1Desc:
+            "ហាងលក់ទំនិញអនឡាញសម្រាប់លក់ផលិតផល ដោយមានផ្ទាំងគ្រប់គ្រងពេញលេញសម្រាប់បង្កើត កែសម្រួល និងលុបបញ្ជីផលិតផល។",
+          tagPortfolio: "ផលប័ត្រ",
+          project2Title: "ផលប័ត្រ",
+          project2Desc:
+            "គេហទំព័រនេះ — ជាផលប័ត្រដែលបានបង្កើត និងធ្វើចលនាដោយដៃ គ្របដណ្តប់អំពីខ្លួនខ្ញុំ និងអ្វីដែលខ្ញុំធ្វើការជាមួយ។",
+          ctaLabel: "// បន្ទាប់",
+          ctaTitle: "តោះបង្កើតអ្វីមួយជាមួយគ្នា",
+          ctaBtn: "ទាក់ទងខ្ញុំ",
         },
       },
       aria: {

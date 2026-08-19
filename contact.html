@@ -34,7 +34,11 @@
             fontFamily: {
               sans: ['"Plus Jakarta Sans"', "ui-sans-serif", "system-ui"],
               mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular"],
-              khmer: ['"Noto Sans Khmer"', '"Plus Jakarta Sans"', "ui-sans-serif"],
+              khmer: [
+                '"Noto Sans Khmer"',
+                '"Plus Jakarta Sans"',
+                "ui-sans-serif",
+              ],
             },
             colors: {
               brand: {
@@ -361,10 +365,7 @@
       /* Khmer script gets its own font stack + slightly larger line-height for legibility */
       html.lang-km body {
         font-family:
-          "Noto Sans Khmer",
-          "Plus Jakarta Sans",
-          ui-sans-serif,
-          system-ui;
+          "Noto Sans Khmer", "Plus Jakarta Sans", ui-sans-serif, system-ui;
       }
       html.lang-km p,
       html.lang-km span,
@@ -424,13 +425,25 @@
           class="hidden md:flex items-center gap-8 text-sm font-bold text-ink-300"
         >
           <li>
-            <a class="nav-link hover:text-white" href="index.html" data-i18n="nav.home">Home</a>
+            <a
+              class="nav-link hover:text-white"
+              href="index.html"
+              data-i18n="nav.home"
+              >Home</a
+            >
           </li>
           <li>
-            <a class="nav-link hover:text-white" href="resume.html" data-i18n="nav.resume">Resume</a>
+            <a
+              class="nav-link hover:text-white"
+              href="resume.html"
+              data-i18n="nav.resume"
+              >Resume</a
+            >
           </li>
           <li>
-            <a class="nav-link hover:text-white" href="projects.html"
+            <a
+              class="nav-link hover:text-white"
+              href="projects.html"
               data-i18n="nav.projects"
               >Projects</a
             >
@@ -476,11 +489,26 @@
         id="navLinksMobile"
         class="hidden md:hidden flex-col gap-1 px-6 pt-4 text-sm font-bold text-ink-300"
       >
-        <li><a class="block py-2" href="index.html" data-i18n="nav.home">Home</a></li>
-        <li><a class="block py-2" href="resume.html" data-i18n="nav.resume">Resume</a></li>
-        <li><a class="block py-2" href="projects.html" data-i18n="nav.projects">Projects</a></li>
         <li>
-          <a class="block py-2 text-white" href="contact.html" data-i18n="nav.contact">Contact</a>
+          <a class="block py-2" href="index.html" data-i18n="nav.home">Home</a>
+        </li>
+        <li>
+          <a class="block py-2" href="resume.html" data-i18n="nav.resume"
+            >Resume</a
+          >
+        </li>
+        <li>
+          <a class="block py-2" href="projects.html" data-i18n="nav.projects"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="block py-2 text-white"
+            href="contact.html"
+            data-i18n="nav.contact"
+            >Contact</a
+          >
         </li>
         <li class="pt-2">
           <button
@@ -521,14 +549,21 @@
             <span
               class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-blink"
             ></span>
-            <span data-i18n="pages.contact.eyebrow">~/portfolio $ contact --new</span>
+            <span data-i18n="pages.contact.eyebrow"
+              >~/portfolio $ contact --new</span
+            >
           </div>
           <h1
             class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 text-white"
           >
-            <span class="text-gradient" data-i18n="pages.contact.title">Get in touch</span>
+            <span class="text-gradient" data-i18n="pages.contact.title"
+              >Get in touch</span
+            >
           </h1>
-          <p class="text-lg font-light text-ink-400" data-i18n="pages.contact.subtitle">
+          <p
+            class="text-lg font-light text-ink-400"
+            data-i18n="pages.contact.subtitle"
+          >
             Let's work together — reach out on whichever channel is easiest for
             you.
           </p>
@@ -555,8 +590,18 @@
               >
                 <i class="bi bi-telephone"></i>
               </div>
-              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.phoneTitle">Phone</h5>
-              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.phoneDesc">Call or message any time.</p>
+              <h5
+                class="font-extrabold text-white mb-1"
+                data-i18n="pages.contact.phoneTitle"
+              >
+                Phone
+              </h5>
+              <p
+                class="text-sm text-ink-400 mb-4"
+                data-i18n="pages.contact.phoneDesc"
+              >
+                Call or message any time.
+              </p>
               <div
                 class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10"
               >
@@ -591,8 +636,16 @@
               >
                 <i class="bi bi-telegram"></i>
               </div>
-              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.telegramTitle">Telegram</h5>
-              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.telegramDesc">
+              <h5
+                class="font-extrabold text-white mb-1"
+                data-i18n="pages.contact.telegramTitle"
+              >
+                Telegram
+              </h5>
+              <p
+                class="text-sm text-ink-400 mb-4"
+                data-i18n="pages.contact.telegramDesc"
+              >
                 Usually the fastest way to reach me.
               </p>
               <div
@@ -627,8 +680,16 @@
               >
                 <i class="bi bi-whatsapp"></i>
               </div>
-              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.whatsappTitle">WhatsApp</h5>
-              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.whatsappDesc">
+              <h5
+                class="font-extrabold text-white mb-1"
+                data-i18n="pages.contact.whatsappTitle"
+              >
+                WhatsApp
+              </h5>
+              <p
+                class="text-sm text-ink-400 mb-4"
+                data-i18n="pages.contact.whatsappDesc"
+              >
                 Good for calls or voice notes on the go.
               </p>
               <div
@@ -665,8 +726,16 @@
               >
                 <i class="bi bi-messenger"></i>
               </div>
-              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.messengerTitle">Messenger</h5>
-              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.messengerDesc">
+              <h5
+                class="font-extrabold text-white mb-1"
+                data-i18n="pages.contact.messengerTitle"
+              >
+                Messenger
+              </h5>
+              <p
+                class="text-sm text-ink-400 mb-4"
+                data-i18n="pages.contact.messengerDesc"
+              >
                 Popular with local Cambodian clients.
               </p>
               <div
@@ -676,12 +745,12 @@
                   >Kim Thoy</span
                 >
                 <a
-                  href="https://www.facebook.com/profile.php?id=100062555424209"
+                  href="https://www.facebook.com/share/1BTaSkcZeo/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener"
-                  aria-label="Open Messenger chat"
-                  data-i18n-aria="aria.openMessenger"
-                  class="copy-btn shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-ink-300 hover:text-white hover:border-white/30 flex items-center justify-center"
+                  aria-label="Open Facebook profile"
+                  data-i18n-aria="aria.openFacebook"
+                  class="link-btn shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-ink-300 hover:text-white hover:border-white/30 flex items-center justify-center"
                 >
                   <i class="bi bi-box-arrow-up-right"></i>
                 </a>
@@ -704,8 +773,16 @@
               >
                 <i class="bi bi-envelope"></i>
               </div>
-              <h5 class="font-extrabold text-white mb-1" data-i18n="pages.contact.emailTitle">Email</h5>
-              <p class="text-sm text-ink-400 mb-4" data-i18n="pages.contact.emailDesc">
+              <h5
+                class="font-extrabold text-white mb-1"
+                data-i18n="pages.contact.emailTitle"
+              >
+                Email
+              </h5>
+              <p
+                class="text-sm text-ink-400 mb-4"
+                data-i18n="pages.contact.emailDesc"
+              >
                 Best for project briefs and longer details.
               </p>
               <div
@@ -729,7 +806,10 @@
 
           <!-- Social row -->
           <div class="reveal text-center">
-            <div class="text-xs font-mono text-brand-secondary mb-5" data-i18n="pages.contact.elsewhere">
+            <div
+              class="text-xs font-mono text-brand-secondary mb-5"
+              data-i18n="pages.contact.elsewhere"
+            >
               // elsewhere
             </div>
             <div class="flex justify-center gap-4 flex-wrap">
@@ -784,9 +864,18 @@
           © <span id="year"></span> kim-thoy.dev
         </div>
         <div class="flex gap-4">
-          <a href="#!" class="hover:text-white" data-i18n="footer.privacy">Privacy</a>
-          <a href="#!" class="hover:text-white" data-i18n="footer.terms">Terms</a>
-          <a href="contact.html" class="hover:text-white" data-i18n="footer.contact">Contact</a>
+          <a href="#!" class="hover:text-white" data-i18n="footer.privacy"
+            >Privacy</a
+          >
+          <a href="#!" class="hover:text-white" data-i18n="footer.terms"
+            >Terms</a
+          >
+          <a
+            href="contact.html"
+            class="hover:text-white"
+            data-i18n="footer.contact"
+            >Contact</a
+          >
         </div>
       </div>
     </footer>

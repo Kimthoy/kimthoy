@@ -1,423 +1,851 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="Resume of Kim Thoy — Laravel, JavaScript and C# developer." />
-<meta name="author" content="Kim Thoy" />
-<title>Resume | Kim Thoy</title>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Resume of Kim Thoy — Laravel, JavaScript and C# developer."
+    />
+    <meta name="author" content="Kim Thoy" />
+    <title>Resume | Kim Thoy</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Khmer:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-<!-- Tailwind CSS via CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui'],
-          mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular'],
-        },
-        colors: {
-          brand: { primary: '#1e30f3', secondary: '#e21e80' },
-          ink: {
-            950: '#07080c', 900: '#0b0d14', 850: '#0f121b', 800: '#12141f',
-            700: '#191c29', 600: '#232739', 500: '#31374d', 400: '#565d78',
-            300: '#8b90a8', 200: '#c2c5d6', 100: '#e7e8f0',
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "ui-sans-serif", "system-ui"],
+              mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular"],
+              khmer: [
+                '"Noto Sans Khmer"',
+                '"Plus Jakarta Sans"',
+                "ui-sans-serif",
+              ],
+            },
+            colors: {
+              brand: { primary: "#1e30f3", secondary: "#e21e80" },
+              ink: {
+                950: "#07080c",
+                900: "#0b0d14",
+                850: "#0f121b",
+                800: "#12141f",
+                700: "#191c29",
+                600: "#232739",
+                500: "#31374d",
+                400: "#565d78",
+                300: "#8b90a8",
+                200: "#c2c5d6",
+                100: "#e7e8f0",
+              },
+            },
+            keyframes: {
+              drift: {
+                "0%, 100%": { transform: "translate(0,0) scale(1)" },
+                "33%": { transform: "translate(30px,-20px) scale(1.08)" },
+                "66%": { transform: "translate(-20px,15px) scale(0.96)" },
+              },
+              blink: {
+                "0%, 49%": { opacity: "1" },
+                "50%, 100%": { opacity: "0" },
+              },
+            },
+            animation: {
+              drift: "drift 14s ease-in-out infinite",
+              "drift-slow": "drift 20s ease-in-out infinite reverse",
+              blink: "blink 1s step-end infinite",
+            },
           },
         },
-        keyframes: {
-          drift: {
-            '0%, 100%': { transform: 'translate(0,0) scale(1)' },
-            '33%': { transform: 'translate(30px,-20px) scale(1.08)' },
-            '66%': { transform: 'translate(-20px,15px) scale(0.96)' },
-          },
-          blink: { '0%, 49%': { opacity: '1' }, '50%, 100%': { opacity: '0' } },
-        },
-        animation: {
-          drift: 'drift 14s ease-in-out infinite',
-          'drift-slow': 'drift 20s ease-in-out infinite reverse',
-          blink: 'blink 1s step-end infinite',
-        },
-      },
-    },
-  };
-</script>
+      };
+    </script>
 
-<style>
-  html { scroll-behavior: smooth; overflow-x: hidden; }
-  body { background-color: #07080c; overflow-x: hidden; }
+    <style>
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      body {
+        background-color: #07080c;
+        overflow-x: hidden;
+      }
 
-  .text-gradient {
-    background-image: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-  }
-  .bg-brand-gradient { background-image: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%); }
+      .text-gradient {
+        background-image: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .bg-brand-gradient {
+        background-image: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+      }
 
-  .grid-veil {
-    background-image:
-      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-    background-size: 42px 42px;
-    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
-  }
-  .orb { position: absolute; border-radius: 9999px; filter: blur(90px); opacity: .35; pointer-events: none; }
+      .grid-veil {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+          );
+        background-size: 42px 42px;
+        -webkit-mask-image: radial-gradient(
+          ellipse 80% 60% at 50% 0%,
+          #000 40%,
+          transparent 90%
+        );
+        mask-image: radial-gradient(
+          ellipse 80% 60% at 50% 0%,
+          #000 40%,
+          transparent 90%
+        );
+      }
+      .orb {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(90px);
+        opacity: 0.35;
+        pointer-events: none;
+      }
 
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
-  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-  #mainNav { transition: box-shadow .25s ease, background-color .25s ease, border-color .25s ease; }
-  #mainNav.is-scrolled { box-shadow: 0 12px 30px -14px rgba(0,0,0,0.6); border-color: rgba(255,255,255,0.08); }
+      #mainNav {
+        transition:
+          box-shadow 0.25s ease,
+          background-color 0.25s ease,
+          border-color 0.25s ease;
+      }
+      #mainNav.is-scrolled {
+        box-shadow: 0 12px 30px -14px rgba(0, 0, 0, 0.6);
+        border-color: rgba(255, 255, 255, 0.08);
+      }
 
-  .nav-link { position: relative; }
-  .nav-link::after {
-    content: ""; position: absolute; left: 0; bottom: -4px; width: 0%; height: 2px; border-radius: 2px;
-    background-image: linear-gradient(90deg, #1e30f3, #e21e80);
-    transition: width .25s cubic-bezier(.16,1,.3,1);
-  }
-  .nav-link:hover::after { width: 100%; }
-  .nav-link.is-active::after { width: 100%; }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0%;
+        height: 2px;
+        border-radius: 2px;
+        background-image: linear-gradient(90deg, #1e30f3, #e21e80);
+        transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .nav-link.is-active::after {
+        width: 100%;
+      }
 
-  .logo-shimmer { background-size: 200% auto; transition: background-position .5s ease; }
-  .logo-shimmer:hover { background-position: -100% 0; }
+      .logo-shimmer {
+        background-size: 200% auto;
+        transition: background-position 0.5s ease;
+      }
+      .logo-shimmer:hover {
+        background-position: -100% 0;
+      }
 
-  #heroGlow {
-    position: absolute; inset: 0; z-index: 0; pointer-events: none;
-    background: radial-gradient(500px circle at var(--mx,50%) var(--my,10%), rgba(226,30,128,.10), transparent 60%);
-  }
+      #heroGlow {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          500px circle at var(--mx, 50%) var(--my, 10%),
+          rgba(226, 30, 128, 0.1),
+          transparent 60%
+        );
+      }
 
-  /* Timeline */
-  .timeline { position: relative; }
-  .timeline::before {
-    content: ""; position: absolute; left: 15px; top: 6px; bottom: 6px; width: 2px;
-    background: linear-gradient(180deg, rgba(30,48,243,.6), rgba(226,30,128,.6));
-  }
-  .timeline-item { position: relative; padding-left: 3rem; }
-  .timeline-dot {
-    position: absolute; left: 8px; top: 6px; width: 16px; height: 16px; border-radius: 9999px;
-    background: #07080c; border: 2px solid #e21e80; box-shadow: 0 0 0 4px rgba(226,30,128,.15);
-  }
+      /* Timeline */
+      .timeline {
+        position: relative;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: linear-gradient(
+          180deg,
+          rgba(30, 48, 243, 0.6),
+          rgba(226, 30, 128, 0.6)
+        );
+      }
+      .timeline-item {
+        position: relative;
+        padding-left: 3rem;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: 8px;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        border-radius: 9999px;
+        background: #07080c;
+        border: 2px solid #e21e80;
+        box-shadow: 0 0 0 4px rgba(226, 30, 128, 0.15);
+      }
 
-  /* Timeline card: tilt + spotlight (shared recipe) */
-  .tl-card {
-    position: relative; overflow: hidden;
-    transform-style: preserve-3d; will-change: transform;
-    transform: perspective(1000px) rotateX(var(--rx,0)) rotateY(var(--ry,0)) translateY(var(--ty,0));
-    transition: transform .35s cubic-bezier(.16,1,.3,1);
-  }
-  .tl-card::before {
-    content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
-    background: linear-gradient(135deg, rgba(30,48,243,.7), rgba(226,30,128,.7));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor; mask-composite: exclude;
-    opacity: 0; transition: opacity .25s ease;
-  }
-  .tl-card:hover::before { opacity: 1; }
-  .tl-card::after {
-    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 1;
-    background: radial-gradient(280px circle at var(--x,50%) var(--y,50%), rgba(255,255,255,.06), transparent 65%);
-    opacity: 0; transition: opacity .3s ease;
-  }
-  .tl-card:hover::after { opacity: 1; }
+      /* Timeline card: tilt + spotlight (shared recipe) */
+      .tl-card {
+        position: relative;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        will-change: transform;
+        transform: perspective(1000px) rotateX(var(--rx, 0))
+          rotateY(var(--ry, 0)) translateY(var(--ty, 0));
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .tl-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(
+          135deg,
+          rgba(30, 48, 243, 0.7),
+          rgba(226, 30, 128, 0.7)
+        );
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+      }
+      .tl-card:hover::before {
+        opacity: 1;
+      }
+      .tl-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        z-index: 1;
+        background: radial-gradient(
+          280px circle at var(--x, 50%) var(--y, 50%),
+          rgba(255, 255, 255, 0.06),
+          transparent 65%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .tl-card:hover::after {
+        opacity: 1;
+      }
 
-  /* Skill chip pop */
-  .chip { transition: transform .2s cubic-bezier(.34,1.56,.64,1), border-color .2s ease, background-color .2s ease; }
-  .chip:hover { transform: translateY(-3px); border-color: rgba(255,255,255,.3); }
+      /* Skill chip pop */
+      .chip {
+        transition:
+          transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+          border-color 0.2s ease,
+          background-color 0.2s ease;
+      }
+      .chip:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
 
-  /* Magnetic buttons with shine sweep */
-  .btn-magnetic { will-change: transform; transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease; }
-  .btn-shine { position: relative; overflow: hidden; }
-  .btn-shine::after {
-    content: ""; position: absolute; top: 0; left: -60%; width: 35%; height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,.4), transparent);
-    transform: skewX(-20deg);
-    transition: left .65s cubic-bezier(.16,1,.3,1);
-    pointer-events: none;
-  }
-  .btn-shine:hover::after { left: 130%; }
+      /* Magnetic buttons with shine sweep */
+      .btn-magnetic {
+        will-change: transform;
+        transition:
+          transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+          box-shadow 0.2s ease;
+      }
+      .btn-shine {
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-shine::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -60%;
+        width: 35%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+        transform: skewX(-20deg);
+        transition: left 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+      }
+      .btn-shine:hover::after {
+        left: 130%;
+      }
 
-  .term-dot { width: 10px; height: 10px; border-radius: 9999px; }
+      .term-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 9999px;
+      }
 
-  ::selection { background: #1e30f3; color: #fff; }
+      ::selection {
+        background: #1e30f3;
+        color: #fff;
+      }
 
-  @media (prefers-reduced-motion: reduce) {
-    * { animation: none !important; transition: none !important; }
-    .tl-card { transform: none !important; }
-  }
-</style>
-</head>
-<body class="min-h-screen flex flex-col bg-ink-950 text-ink-100 font-sans antialiased">
+      /* Khmer script gets its own font stack + slightly larger line-height for legibility */
+      html.lang-km body {
+        font-family:
+          "Noto Sans Khmer", "Plus Jakarta Sans", ui-sans-serif, system-ui;
+      }
+      html.lang-km p,
+      html.lang-km span,
+      html.lang-km h1,
+      html.lang-km h3,
+      html.lang-km li,
+      html.lang-km div {
+        line-height: 1.7;
+      }
 
-<!-- Navigation -->
-<nav id="mainNav" class="sticky top-0 z-50 bg-ink-950/80 backdrop-blur-md border-b border-white/5 py-4">
-  <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
-    <a href="index.html" class="text-lg font-extrabold text-gradient logo-shimmer font-mono">kim-thoy<span class="text-ink-400">.dev</span></a>
+      /* Language toggle pill */
+      .lang-toggle {
+        transition:
+          border-color 0.2s ease,
+          background-color 0.2s ease;
+      }
+      .lang-toggle:hover {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
 
-    <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 text-ink-200" aria-label="Toggle navigation" aria-expanded="false">
-      <i class="bi bi-list text-2xl"></i>
-    </button>
-
-    <ul id="navLinks" class="hidden md:flex items-center gap-8 text-sm font-bold text-ink-300">
-      <li><a class="nav-link hover:text-white" href="index.html">Home</a></li>
-      <li><a class="nav-link is-active text-white" href="resume.html" aria-current="page">Resume</a></li>
-      <li><a class="nav-link hover:text-white" href="projects.html">Projects</a></li>
-      <li><a class="nav-link hover:text-white" href="contact.html">Contact</a></li>
-      <li>
-        <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-mono hover:border-white/25 transition-colors">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> available
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Mobile menu -->
-  <ul id="navLinksMobile" class="hidden md:hidden flex-col gap-1 px-6 pt-4 text-sm font-bold text-ink-300">
-    <li><a class="block py-2" href="index.html">Home</a></li>
-    <li><a class="block py-2 text-white" href="resume.html">Resume</a></li>
-    <li><a class="block py-2" href="projects.html">Projects</a></li>
-    <li><a class="block py-2" href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<main class="flex-1">
-
-  <!-- Header -->
-  <header id="hero" class="relative py-16 md:py-20">
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="orb w-[380px] h-[380px] bg-brand-primary -top-32 -left-32 animate-drift"></div>
-      <div class="orb w-[340px] h-[340px] bg-brand-secondary top-24 -right-24 animate-drift-slow"></div>
-      <div class="absolute inset-0 grid-veil"></div>
-      <div id="heroGlow"></div>
-    </div>
-
-    <div class="relative max-w-4xl mx-auto px-6">
-      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 text-center sm:text-left reveal">
-        <div>
-          <div class="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full text-xs font-mono text-ink-300 bg-white/5 border border-white/10">
-            <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-blink"></span>
-            ~/portfolio $ cat resume.md
-          </div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-white">
-            <span class="text-gradient">Resume</span>
-          </h1>
-        </div>
-        <a href="assets/CV_of_Kim_Thoy.pdf" download="CV_of_Kim_Thoy.pdf" data-magnetic
-           class="btn-magnetic btn-shine inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-extrabold text-white bg-brand-gradient shadow-lg shadow-brand-secondary/20
-                  hover:shadow-xl hover:shadow-brand-secondary/30 active:scale-[0.96] whitespace-nowrap">
-          <i class="bi bi-download"></i> Download Resume
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Experience -->
-  <section class="pb-4">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-xs font-mono text-brand-secondary mb-6 reveal">// experience</div>
-
-      <div class="timeline reveal">
-        <div class="timeline-item pb-2">
-          <span class="timeline-dot"></span>
-          <div class="tl-card spot bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 h-fit">
-              <div class="text-brand-secondary font-mono text-sm font-bold mb-2">2021 — Present</div>
-              <div class="text-sm font-bold text-white">National Polytechnic Institute of Cambodia (NPIC)</div>
-              <div class="text-xs text-ink-400 mt-1">Year 3 · Computer Science</div>
-            </div>
-            <div class="md:col-span-2 text-ink-400 text-sm leading-relaxed">
-              Currently pursuing a Bachelor's degree in Computer Science at NPIC. Over the past three years I've built up my skills across:
-              <ul class="mt-3 space-y-1.5">
-                <li class="flex gap-2"><span class="text-brand-primary font-mono">›</span> <span><span class="text-ink-100 font-semibold">Laravel</span> — a robust PHP framework for web applications</span></li>
-                <li class="flex gap-2"><span class="text-brand-primary font-mono">›</span> <span><span class="text-ink-100 font-semibold">PHP</span> — a versatile scripting language for the web</span></li>
-                <li class="flex gap-2"><span class="text-brand-primary font-mono">›</span> <span><span class="text-ink-100 font-semibold">HTML5 &amp; CSS3</span> — the building blocks of web structure and design</span></li>
-                <li class="flex gap-2"><span class="text-brand-primary font-mono">›</span> <span><span class="text-ink-100 font-semibold">JavaScript</span> — for building interactive, dynamic web pages</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section class="py-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-xs font-mono text-brand-primary mb-6 reveal">// education</div>
-
-      <div class="timeline reveal flex flex-col gap-8">
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div class="tl-card spot bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 h-fit">
-              <div class="text-brand-primary font-mono text-sm font-bold mb-2">2021 — Present</div>
-              <div class="text-sm font-bold text-white">National Polytechnic Institute of Cambodia (NPIC)</div>
-              <div class="text-xs text-ink-400 mt-1 italic">Computer Science · Year 3</div>
-            </div>
-            <div class="md:col-span-2 text-ink-400 text-sm leading-relaxed self-center">
-              Pursuing a degree in Computer Science at a reputable institution in Cambodia — building a foundation in programming, software development, and web technologies for a future career in tech.
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div class="tl-card spot bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/5 border border-white/10 rounded-xl p-4 h-fit">
-              <div class="text-brand-primary font-mono text-sm font-bold mb-2">2020 — 2021</div>
-              <div class="text-sm font-bold text-white">Sok An Phnom Penh High School</div>
-              <div class="text-xs text-ink-400 mt-1 italic">Diploma</div>
-            </div>
-            <div class="md:col-span-2 text-ink-400 text-sm leading-relaxed self-center">
-              Graduated in 2021 with a strong foundation across Mathematics, English, and Khmer — ready to apply that foundation to what came next.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="pb-24">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-xs font-mono text-brand-secondary mb-6 reveal">// skills</div>
-
-      <div class="reveal bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8">
-        <div class="flex items-center gap-2 text-[11px] font-mono text-ink-400 mb-8">
-          <span class="term-dot bg-[#ff5f57]"></span>
-          <span class="term-dot bg-[#febc2e]"></span>
-          <span class="term-dot bg-[#28c840]"></span>
-          <span class="ml-2">skills.json</span>
-        </div>
-
-        <div class="mb-8">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-primary/15 to-brand-secondary/15 flex items-center justify-center text-brand-primary">
-              <i class="bi bi-tools"></i>
-            </div>
-            <h3 class="font-extrabold text-white">Professional Skills</h3>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-ink-100">Backend Developer</span>
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-ink-100">Design</span>
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-ink-100">Communication</span>
-          </div>
-        </div>
-
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-primary/15 to-brand-secondary/15 flex items-center justify-center text-brand-primary">
-              <i class="bi bi-code-slash"></i>
-            </div>
-            <h3 class="font-extrabold text-white">Languages</h3>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100">HTML</span>
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100">CSS</span>
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100">JavaScript</span>
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100">PHP</span>
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100">Ruby</span>
-            <span class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100">Laravel</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="border-t border-white/5 py-6 mt-auto">
-  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-ink-400">
-    <div class="font-mono text-xs">© <span id="year"></span> kim-thoy.dev</div>
-    <div class="flex gap-4">
-      <a href="#!" class="hover:text-white">Privacy</a>
-      <a href="#!" class="hover:text-white">Terms</a>
-      <a href="contact.html" class="hover:text-white">Contact</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('is-scrolled', window.scrollY > 8);
-  });
-
-  const navToggle = document.getElementById('navToggle');
-  const navLinksMobile = document.getElementById('navLinksMobile');
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinksMobile.classList.toggle('flex');
-    navLinksMobile.classList.toggle('hidden');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
         }
-      });
-    }, { threshold: 0.15 });
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add('is-visible'));
-  }
+        .tl-card {
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-ink-950 text-ink-100 font-sans antialiased"
+  >
+    <!-- Navigation -->
+    <nav
+      id="mainNav"
+      class="sticky top-0 z-50 bg-ink-950/80 backdrop-blur-md border-b border-white/5 py-4"
+    >
+      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <a
+          href="index.html"
+          class="text-lg font-extrabold text-gradient logo-shimmer font-mono"
+          >kim-thoy<span class="text-ink-400">.dev</span></a
+        >
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        <button
+          id="navToggle"
+          class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 text-ink-200"
+          aria-label="Toggle navigation"
+          data-i18n-aria="aria.toggleNav"
+          aria-expanded="false"
+        >
+          <i class="bi bi-list text-2xl"></i>
+        </button>
 
-  if (!reduceMotion) {
-    const hero = document.getElementById('hero');
-    const heroGlow = document.getElementById('heroGlow');
-    if (hero && heroGlow) {
-      hero.addEventListener('mousemove', (e) => {
-        const r = hero.getBoundingClientRect();
-        heroGlow.style.setProperty('--mx', ((e.clientX - r.left) / r.width) * 100 + '%');
-        heroGlow.style.setProperty('--my', ((e.clientY - r.top) / r.height) * 100 + '%');
-      });
-    }
+        <ul
+          id="navLinks"
+          class="hidden md:flex items-center gap-8 text-sm font-bold text-ink-300"
+        >
+          <li>
+            <a class="nav-link hover:text-white" href="index.html" data-i18n="nav.home">Home</a>
+          </li>
+          <li>
+            <a
+              class="nav-link is-active text-white"
+              href="resume.html"
+              aria-current="page"
+              data-i18n="nav.resume"
+              >Resume</a
+            >
+          </li>
+          <li>
+            <a class="nav-link hover:text-white" href="projects.html" data-i18n="nav.projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a class="nav-link hover:text-white" href="contact.html" data-i18n="nav.contact">Contact</a>
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-xs font-mono hover:border-white/25 transition-colors"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span data-i18n="nav.available">available</span>
+            </a>
+          </li>
+          <li>
+            <button
+              type="button"
+              data-lang-toggle
+              aria-pressed="false"
+              aria-label="Switch language"
+              data-i18n-aria="aria.toggleLang"
+              class="lang-toggle inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-ink-200 text-xs font-mono"
+            >
+              <i class="bi bi-translate"></i>
+              <span data-i18n="common.translate">Translate</span>
+              <span class="text-ink-500">·</span>
+              <span data-lang-label>ខ្មែរ</span>
+            </button>
+          </li>
+        </ul>
+      </div>
 
-    document.querySelectorAll('.tl-card').forEach((card) => {
-      card.addEventListener('mousemove', (e) => {
-        const r = card.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width;
-        const py = (e.clientY - r.top) / r.height;
-        card.style.setProperty('--ry', ((px - 0.5) * 3) + 'deg');
-        card.style.setProperty('--rx', ((py - 0.5) * -3) + 'deg');
-        card.style.setProperty('--ty', '-3px');
-        card.style.setProperty('--x', (px * 100) + '%');
-        card.style.setProperty('--y', (py * 100) + '%');
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--ry', '0deg');
-        card.style.setProperty('--rx', '0deg');
-        card.style.setProperty('--ty', '0px');
-      });
-    });
+      <!-- Mobile menu -->
+      <ul
+        id="navLinksMobile"
+        class="hidden md:hidden flex-col gap-1 px-6 pt-4 text-sm font-bold text-ink-300"
+      >
+        <li><a class="block py-2" href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a class="block py-2 text-white" href="resume.html" data-i18n="nav.resume">Resume</a></li>
+        <li><a class="block py-2" href="projects.html" data-i18n="nav.projects">Projects</a></li>
+        <li><a class="block py-2" href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li class="pt-2">
+          <button
+            type="button"
+            data-lang-toggle
+            aria-pressed="false"
+            aria-label="Switch language"
+            data-i18n-aria="aria.toggleLang"
+            class="lang-toggle inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-ink-200 text-xs font-mono"
+          >
+            <i class="bi bi-translate"></i>
+            <span data-i18n="common.translate">Translate</span>
+            <span class="text-ink-500">·</span>
+            <span data-lang-label>ខ្មែរ</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
 
-    document.querySelectorAll('[data-magnetic]').forEach((btn) => {
-      btn.addEventListener('mousemove', (e) => {
-        const r = btn.getBoundingClientRect();
-        const x = (e.clientX - r.left - r.width / 2) * 0.3;
-        const y = (e.clientY - r.top - r.height / 2) * 0.3;
-        btn.style.transform = `translate(${x}px, ${y}px)`;
-      });
-      btn.addEventListener('mouseleave', () => {
-        btn.style.transform = 'translate(0, 0)';
-      });
-    });
-  }
-</script>
+    <main class="flex-1">
+      <!-- Header -->
+      <header id="hero" class="relative py-16 md:py-20">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            class="orb w-[380px] h-[380px] bg-brand-primary -top-32 -left-32 animate-drift"
+          ></div>
+          <div
+            class="orb w-[340px] h-[340px] bg-brand-secondary top-24 -right-24 animate-drift-slow"
+          ></div>
+          <div class="absolute inset-0 grid-veil"></div>
+          <div id="heroGlow"></div>
+        </div>
 
-</body>
+        <div class="relative max-w-4xl mx-auto px-6">
+          <div
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 text-center sm:text-left reveal"
+          >
+            <div>
+              <div
+                class="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full text-xs font-mono text-ink-300 bg-white/5 border border-white/10"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-brand-secondary animate-blink"
+                ></span>
+                <span data-i18n="pages.resume.eyebrow">~/portfolio $ cat resume.md</span>
+              </div>
+              <h1
+                class="text-4xl sm:text-5xl font-extrabold leading-tight text-white"
+              >
+                <span class="text-gradient" data-i18n="pages.resume.title">Resume</span>
+              </h1>
+            </div>
+            <a
+              href="assets/CV_of_Kim_Thoy.pdf"
+              download="CV_of_Kim_Thoy.pdf"
+              data-magnetic
+              class="btn-magnetic btn-shine inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-extrabold text-white bg-brand-gradient shadow-lg shadow-brand-secondary/20 hover:shadow-xl hover:shadow-brand-secondary/30 active:scale-[0.96] whitespace-nowrap"
+            >
+              <i class="bi bi-download"></i> <span data-i18n="pages.resume.downloadBtn">Download Resume</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Experience -->
+      <section class="pb-4">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-xs font-mono text-brand-secondary mb-6 reveal" data-i18n="pages.resume.experienceLabel">
+            // experience
+          </div>
+
+          <div class="timeline reveal">
+            <div class="timeline-item pb-2">
+              <span class="timeline-dot"></span>
+              <div
+                class="tl-card spot bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6"
+              >
+                <div
+                  class="bg-white/5 border border-white/10 rounded-xl p-4 h-fit"
+                >
+                  <div
+                    class="text-brand-secondary font-mono text-sm font-bold mb-2"
+                  >
+                    2021 — Present
+                  </div>
+                  <div class="text-sm font-bold text-white" data-i18n="pages.resume.npicOrg">
+                    National Polytechnic Institute of Cambodia (NPIC)
+                  </div>
+                  <div class="text-xs text-ink-400 mt-1" data-i18n="pages.resume.expOrgSub">
+                    Year 3 · Computer Science
+                  </div>
+                </div>
+                <div class="md:col-span-2 text-ink-400 text-sm leading-relaxed">
+                  <span data-i18n="pages.resume.expIntro">Currently pursuing a Bachelor's degree in Computer Science at
+                  NPIC. Over the past three years I've built up my skills
+                  across:</span>
+                  <ul class="mt-3 space-y-1.5">
+                    <li class="flex gap-2">
+                      <span class="text-brand-primary font-mono">›</span>
+                      <span
+                        ><span class="text-ink-100 font-semibold">Laravel</span>
+                        <span data-i18n="pages.resume.skillLaravelDesc">— a robust PHP framework for web applications</span></span
+                      >
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-brand-primary font-mono">›</span>
+                      <span
+                        ><span class="text-ink-100 font-semibold">PHP</span>
+                        <span data-i18n="pages.resume.skillPhpDesc">— a versatile scripting language for the web</span></span
+                      >
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-brand-primary font-mono">›</span>
+                      <span
+                        ><span class="text-ink-100 font-semibold"
+                          >HTML5 &amp; CSS3</span
+                        >
+                        <span data-i18n="pages.resume.skillHtmlCssDesc">— the building blocks of web structure and design</span></span
+                      >
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-brand-primary font-mono">›</span>
+                      <span
+                        ><span class="text-ink-100 font-semibold"
+                          >JavaScript</span
+                        >
+                        <span data-i18n="pages.resume.skillJsDesc">— for building interactive, dynamic web pages</span></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="py-12">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-xs font-mono text-brand-primary mb-6 reveal" data-i18n="pages.resume.educationLabel">
+            // education
+          </div>
+
+          <div class="timeline reveal flex flex-col gap-8">
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div
+                class="tl-card spot bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6"
+              >
+                <div
+                  class="bg-white/5 border border-white/10 rounded-xl p-4 h-fit"
+                >
+                  <div
+                    class="text-brand-primary font-mono text-sm font-bold mb-2"
+                  >
+                    2021 — Present
+                  </div>
+                  <div class="text-sm font-bold text-white" data-i18n="pages.resume.npicOrg">
+                    National Polytechnic Institute of Cambodia (NPIC)
+                  </div>
+                  <div class="text-xs text-ink-400 mt-1 italic" data-i18n="pages.resume.eduPresentSub">
+                    Computer Science · Year 3
+                  </div>
+                </div>
+                <div
+                  class="md:col-span-2 text-ink-400 text-sm leading-relaxed self-center"
+                  data-i18n="pages.resume.eduPresentDesc"
+                >
+                  Pursuing a degree in Computer Science at a reputable
+                  institution in Cambodia — building a foundation in
+                  programming, software development, and web technologies for a
+                  future career in tech.
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div
+                class="tl-card spot bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6"
+              >
+                <div
+                  class="bg-white/5 border border-white/10 rounded-xl p-4 h-fit"
+                >
+                  <div
+                    class="text-brand-primary font-mono text-sm font-bold mb-2"
+                  >
+                    2020 — 2021
+                  </div>
+                  <div class="text-sm font-bold text-white" data-i18n="pages.resume.highSchoolOrg">
+                    Sok An Phnom Penh High School
+                  </div>
+                  <div class="text-xs text-ink-400 mt-1 italic" data-i18n="pages.resume.highSchoolSub">Diploma</div>
+                </div>
+                <div
+                  class="md:col-span-2 text-ink-400 text-sm leading-relaxed self-center"
+                  data-i18n="pages.resume.highSchoolDesc"
+                >
+                  Graduated in 2021 with a strong foundation across Mathematics,
+                  English, and Khmer — ready to apply that foundation to what
+                  came next.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-xs font-mono text-brand-secondary mb-6 reveal" data-i18n="pages.resume.skillsLabel">
+            // skills
+          </div>
+
+          <div
+            class="reveal bg-ink-850 border border-white/10 rounded-2xl p-6 md:p-8"
+          >
+            <div
+              class="flex items-center gap-2 text-[11px] font-mono text-ink-400 mb-8"
+            >
+              <span class="term-dot bg-[#ff5f57]"></span>
+              <span class="term-dot bg-[#febc2e]"></span>
+              <span class="term-dot bg-[#28c840]"></span>
+              <span class="ml-2">skills.json</span>
+            </div>
+
+            <div class="mb-8">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-primary/15 to-brand-secondary/15 flex items-center justify-center text-brand-primary"
+                >
+                  <i class="bi bi-tools"></i>
+                </div>
+                <h3 class="font-extrabold text-white" data-i18n="pages.resume.proSkillsTitle">Professional Skills</h3>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-ink-100"
+                  data-i18n="pages.resume.skillBackendDev"
+                  >Backend Developer</span
+                >
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-ink-100"
+                  data-i18n="pages.resume.skillDesign"
+                  >Design</span
+                >
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-ink-100"
+                  data-i18n="pages.resume.skillCommunication"
+                  >Communication</span
+                >
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-primary/15 to-brand-secondary/15 flex items-center justify-center text-brand-primary"
+                >
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <h3 class="font-extrabold text-white" data-i18n="pages.resume.languagesTitle">Languages</h3>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100"
+                  >HTML</span
+                >
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100"
+                  >CSS</span
+                >
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100"
+                  >JavaScript</span
+                >
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100"
+                  >PHP</span
+                >
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100"
+                  >Ruby</span
+                >
+                <span
+                  class="chip px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm font-mono text-ink-100"
+                  >Laravel</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-6 mt-auto">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-ink-400"
+      >
+        <div class="font-mono text-xs">
+          © <span id="year"></span> kim-thoy.dev
+        </div>
+        <div class="flex gap-4">
+          <a href="#!" class="hover:text-white" data-i18n="footer.privacy">Privacy</a>
+          <a href="#!" class="hover:text-white" data-i18n="footer.terms">Terms</a>
+          <a href="contact.html" class="hover:text-white" data-i18n="footer.contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const nav = document.getElementById("mainNav");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("is-scrolled", window.scrollY > 8);
+      });
+
+      const navToggle = document.getElementById("navToggle");
+      const navLinksMobile = document.getElementById("navLinksMobile");
+      navToggle.addEventListener("click", () => {
+        const isOpen = navLinksMobile.classList.toggle("flex");
+        navLinksMobile.classList.toggle("hidden");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      const revealEls = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        revealEls.forEach((el) => io.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add("is-visible"));
+      }
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      if (!reduceMotion) {
+        const hero = document.getElementById("hero");
+        const heroGlow = document.getElementById("heroGlow");
+        if (hero && heroGlow) {
+          hero.addEventListener("mousemove", (e) => {
+            const r = hero.getBoundingClientRect();
+            heroGlow.style.setProperty(
+              "--mx",
+              ((e.clientX - r.left) / r.width) * 100 + "%",
+            );
+            heroGlow.style.setProperty(
+              "--my",
+              ((e.clientY - r.top) / r.height) * 100 + "%",
+            );
+          });
+        }
+
+        document.querySelectorAll(".tl-card").forEach((card) => {
+          card.addEventListener("mousemove", (e) => {
+            const r = card.getBoundingClientRect();
+            const px = (e.clientX - r.left) / r.width;
+            const py = (e.clientY - r.top) / r.height;
+            card.style.setProperty("--ry", (px - 0.5) * 3 + "deg");
+            card.style.setProperty("--rx", (py - 0.5) * -3 + "deg");
+            card.style.setProperty("--ty", "-3px");
+            card.style.setProperty("--x", px * 100 + "%");
+            card.style.setProperty("--y", py * 100 + "%");
+          });
+          card.addEventListener("mouseleave", () => {
+            card.style.setProperty("--ry", "0deg");
+            card.style.setProperty("--rx", "0deg");
+            card.style.setProperty("--ty", "0px");
+          });
+        });
+
+        document.querySelectorAll("[data-magnetic]").forEach((btn) => {
+          btn.addEventListener("mousemove", (e) => {
+            const r = btn.getBoundingClientRect();
+            const x = (e.clientX - r.left - r.width / 2) * 0.3;
+            const y = (e.clientY - r.top - r.height / 2) * 0.3;
+            btn.style.transform = `translate(${x}px, ${y}px)`;
+          });
+          btn.addEventListener("mouseleave", () => {
+            btn.style.transform = "translate(0, 0)";
+          });
+        });
+      }
+    </script>
+  </body>
 </html>
